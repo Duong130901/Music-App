@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(236, 229, 229);
+
+}
+
+
+.container .pause{
+    display: none;
+}
+
+.container.playing .pause{
+    display: inline-block;
+}
+
+.container.playing .play{
+    display: none;
+}
+
+.repeat.active{
+    color: rgb(255, 122, 45);
+}
+.shuffle.active{
+    color: rgb(255, 122, 45);
+
+}
+
+
+
+
+.container{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(236, 229, 229); */
+
+}
+
+.dashboard{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding-bottom: 10px;
+}
+
+.title{
+    margin: 20px ;
+    color: rgb(255, 154, 60);
+}
+
+.disk{
+    /* display: flex; */
+    /* margin: auto; */
+    width: 250px;
+
+}
+.cd-thumb{
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.control_task{
+    display: flex;
+    line-height: 50px;
+}
+.control-item{
+    padding: 0px 15px;
+    margin: 20px 0;
+    font-size: 30px;
+    color: rgb(158, 157, 157);
+    cursor: pointer;
+    
+
+}
+.toggle{
+    font-size: 50px;
+    color: rgb(255, 122, 45);
+}
+
+
+.progress{
+    width: 250px;
+    background: rgb(255, 122, 45);
+
+}
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background: rgb(255, 122, 45);
+    cursor: pointer;
+  }
+
+.playlist{
+    margin: 500px 16px 0;
+}
+
+.song{
+    margin: 8px 0;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.song.active{
+    background-color: rgb(255, 122, 45);
+    color: #fff;
+}
+.song.active .option{
+    color: #fff;
+}
+
+.thumbnail{
+    margin: 20px;
+    width: 65px;
+    height: 65px;
+    background-color: rgb(255, 137, 59);
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.name{
+    width: 200px;
+    font-size: 18px;
+    /* margin: auto 0; */
+}
+
+.option{
+    padding: 16px 8px;
+    color: #999;
+    font-size: 24px;
+    
+}
