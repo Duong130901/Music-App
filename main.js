@@ -12,6 +12,8 @@ const forward = $('.forward');
 const repeat = $('.repeat');
 const shuffle = $('.shuffle');
 const playlist = $('.playlist');
+const option = $('.option-i');
+
 
 const app = {
     _isplaying : false,
@@ -91,7 +93,7 @@ const app = {
                     <h2> ${song.name}</h2>
                     <div class="artist">${song.singer}</div>
                 </div>
-                <div class="option"><i class="fa-duotone fa-heart"></i></div>
+                <div class="option"><i class="fa-solid fa-heart option-i"></i></div>
             </div>
            `
         })
@@ -142,7 +144,7 @@ const app = {
         }
 
         //xu ly khi bam tua progress
-        progress.onchange = function(){
+        progress.oninput = function(){
             const seekTime = progress.value * audio.duration / 100;
             audio.currentTime = seekTime;
         }
@@ -197,6 +199,20 @@ const app = {
             
         };
 
+        //xu ly quay option
+        // const optionAnimate = option.animate(
+        //     [
+        //         {
+        //             transform: 'rotate(360deg)'
+        //         }
+        //     ],
+        //     {
+        //         duration: 500,
+        //         interations: 1,
+        //     }
+        // );
+        // optionAnimate.pause();
+
         //xu ly khi bam vao bai hat
       playlist.onclick = function(e) {
         songNode = e.target.closest('.song:not(.active)')
@@ -208,10 +224,12 @@ const app = {
                 app.render();
             }
             if(e.target.closest('.option')){
-                console.log(123);
+                
+                console.log(this);
             }
         }
       }
+      
 
 
         
